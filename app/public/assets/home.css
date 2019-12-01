@@ -17,35 +17,15 @@ body {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    /* height: 200px;
-    width: 100px; */
   }
 
-  /* #mikey-image {
-      height: 25%;
-      width: 25px;
-  } */
-
+ 
   .fighter-image {
       height: 300px;
       width: 250px;
       border: 10px solid black;
   }
   
-  /* .fighter-image {
-    border: .4rem solid black;
-    border-radius: .5rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    height: 10%;
-    width: 10%;
-    text-align: center;
-    color: white;
-    background: rgba(0,0,0,0.4);
-    text-shadow: 0 0 .5rem black;
-  } */
   
   .playing {
     transform: scale(1.1);

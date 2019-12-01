@@ -5,6 +5,9 @@
 
 var express = require("express");
 var bodyParser = require("body-parser");
+var http = require("http");
+var fs = require("fs");
+var path = require("path");
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -24,6 +27,8 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
+// Create the path to look at our public file?
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 // ================================================================================
 // ROUTER
@@ -31,8 +36,12 @@ app.use(bodyParser.json());
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+// require("./app/routing/apiRoutes")(app);
+// require("./app/routing/htmlRoutes")(app);
+
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "/app/public/home.html"));
+});
 
 // ==============================================================================
 // LISTENER
