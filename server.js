@@ -8,6 +8,7 @@ var bodyParser = require("body-parser");
 var http = require("http");
 var fs = require("fs");
 var path = require("path");
+var serveStatic = require("serve-static");
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -28,7 +29,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 // Create the path to look at our public file?
-app.use('/static', express.static(path.join(__dirname, 'public')))
+// app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/app'));
+app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/assets'));
+app.use(express.static(__dirname + '/images'));
+app.use(express.static(__dirname + '/styles'));
+app.use(express.static(__dirname + '/javascript'));
+// app.use(serveStatic(path.join(__dirname, 'public')));
 
 // ================================================================================
 // ROUTER
@@ -40,7 +48,7 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 // require("./app/routing/htmlRoutes")(app);
 
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "/app/public/home.html"));
+  res.sendFile(path.join(__dirname, "/app/home.html"));
 });
 
 // ==============================================================================
