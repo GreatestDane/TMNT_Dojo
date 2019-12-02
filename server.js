@@ -30,13 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // Create the path to look at our public file?
 // app.use('/static', express.static(path.join(__dirname, 'public')));
-app.use(express.static(__dirname + '/app'));
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/assets'));
-app.use(express.static(__dirname + '/images'));
-app.use(express.static(__dirname + '/styles'));
-app.use(express.static(__dirname + '/javascript'));
-// app.use(serveStatic(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/app/public'));
 
 // ================================================================================
 // ROUTER
