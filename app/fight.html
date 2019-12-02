@@ -5,29 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="./assets/fight.css"> -->
+    <link rel="stylesheet" href="/assets/styles/fight.css">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>HELLO WORLD</h1>
-        <div class="fighters">
-                <button>
-                    <img id="donatello-image" src="./Donatello_001.jpg">
-                </button>
-                <button>
-                    <img id="raph-image" src="./Raph_001.jpg">
-                </button>
-            </div>
+    <h1>FIGHT TO THE DEATH</h1>
+    <div class="fighters">
+        <button>
+            <img id="player" class="fighter-image" src="/assets/images/Donatello_001.jpg">
+        </button>
+        <button class="btn btn-success btn-lg" id="btn-attack">attack</button><button class="btn btn-success btn-lg"
+            id="btn-block">block</button><button class="btn btn-success btn-lg" id="btn-special">special</button>
+        <button>
+            <img id="enemy" class="fighter-image" src="/assets/images/Raph_001.jpg">
+        </button>
+    </div>
 
-    <!-- <script src="./assets/fight.js"></script>
+    <div id="stats">
+        <div id="player-stats">
+            <h3 id="player-hp">HP: 100</h3>
+            <h3 id="player-special">SPECIAL: 0</h3>
+        </div>
+        <div id="enemy-stats">
+            <h3 id="enemy-hp">HP: 100</h3>
+            <h3 id="enemy-special">SPECIAL: 0</h3>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/assets/javascript/fight.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 
 </html>

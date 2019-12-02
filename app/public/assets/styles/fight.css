@@ -1,0 +1,79 @@
+body {
+    font-size: 10px;
+    background: url("/assets/images/background.jpg") bottom center;
+    background-color: black;
+    background-size: cover;
+  }
+
+  h1 {
+      color: green;
+      text-align: center;
+  }
+  
+  body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  .fighters {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+ 
+  .fighter-image {
+      height: 300px;
+      width: 250px;
+      border: 10px solid black;
+  }
+
+  .btn {
+      padding: 36px 48px;
+      font-size: 40px;
+  }
+
+  /* #player {
+      margin-left: 25px;
+  }
+
+  #enemy {
+      margin-right: 25px;
+  } */
+
+  #stats {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+ #player-stats {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+ }
+
+ #player-hp {
+     margin-right: 15px;
+ }
+
+  #enemy-stats {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  #enemy-special {
+      margin-left: 15px;
+  }
+  
+  
+  
+  
+ 

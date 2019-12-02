@@ -17,12 +17,12 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.get("/fight", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/fight.html"));
+    res.sendFile(path.join(__dirname, "/app/fight.html"));
   });
 
-  app.get("/fight", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public"));
-  });
+  // app.get("/fight", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public"));
+  // });
 
   // If no matching route is found default to home
   // app.get("/", function(req, res) {

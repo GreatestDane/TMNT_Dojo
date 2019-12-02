@@ -45,6 +45,10 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "/app/home.html"));
 });
 
+app.get("/fight", function(req, res) {
+  res.sendFile(path.join(__dirname, "/app/fight.html"));
+});
+
 // ==============================================================================
 // LISTENER
 // The below code effectively "starts" our server
