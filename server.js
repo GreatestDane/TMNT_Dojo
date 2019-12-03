@@ -9,6 +9,7 @@ var http = require("http");
 var fs = require("fs");
 var path = require("path");
 var serveStatic = require("serve-static");
+var turtles = require("./app/public/data/turtles.js")
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -30,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // Create the path to look at our public file?
 // app.use('/static', express.static(path.join(__dirname, 'public')));
-app.use(express.static(__dirname + '/app/public'));
+app.use(express.static(__dirname + "/app/public"));
 
 // ================================================================================
 // ROUTER
@@ -41,12 +42,20 @@ app.use(express.static(__dirname + '/app/public'));
 // require("./app/routing/apiRoutes")(app);
 // require("./app/routing/htmlRoutes")(app);
 
+// HTML ROUTES
+
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "/app/home.html"));
 });
 
-app.get("/fight", function(req, res) {
-  res.sendFile(path.join(__dirname, "/app/fight.html"));
+app.get("/don1", function(req, res) {
+  res.sendFile(path.join(__dirname, "/app/don1.html"));
+});
+
+// API ROUTES
+
+app.get("/api/turtles", function(req, res) {
+  res.json(turtles);
 });
 
 // ==============================================================================

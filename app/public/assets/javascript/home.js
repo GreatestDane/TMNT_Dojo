@@ -1,7 +1,7 @@
 
 
 $(".fighter-image").on("click", function() {
-   location.assign("/fight");
+   location.assign("/don1");
     console.log("You clicked me");
 });
 
